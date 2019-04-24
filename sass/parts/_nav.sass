@@ -1,0 +1,34 @@
+nav.nav
+  position: relative
+  width: 100%
+  background: linear-gradient(180deg, rgba(#000, 0.05), rgba(#fff, 1), rgba(#000, 0.05))
+  @include shadow
+  .container
+    ul 
+      list-style: none
+      margin: 0
+      padding: 0
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-end
+      li
+        display: block
+        a 
+          display: block
+          text-transform: uppercase
+          text-decoration: none
+          padding: $padding
+          color: $dark
+          transition: all 0.17s
+          border: 2px solid rgba($red, 0)
+          &:hover
+            color: $red
+            transition: all 0.17s
+            border-bottom: 2px solid rgba($red, 1)
+          &.active
+            border-bottom: 2px solid rgba($red, 1)
+          &::first-child
+            padding-left: 0
+          &::last-child
+            padding-right: 0
