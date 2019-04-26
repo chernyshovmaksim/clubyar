@@ -5,3 +5,42 @@ section.content
     padding: $padding
     background-color: #ffffff
     @include shadow
+    border-radius: 2px
+
+    .services
+      display: grid 
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: $padding
+      a 
+        display: block
+        img 
+          display: block
+          width: 100%
+          @include shadow
+          border-radius: 2px
+    
+    .greeting
+      padding: 7rem 0
+      font-weight: 300
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: $padding
+      position: relative
+      p
+        display: flex
+        align-items: center
+      .img
+        overflow: hidden
+        height: 75vh
+        position: relative
+        img
+          width: 100%
+        &::before
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: 0
+          width: 25%
+          height: 100%
+          background: linear-gradient(90deg, rgba(#fff, 1), rgba(#fff, 0.1), rgba(#fff, 0))
