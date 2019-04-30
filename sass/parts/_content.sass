@@ -18,6 +18,10 @@ section.content
           width: 100%
           @include shadow
           border-radius: 2px
+          transition: all 0.17s
+          &:hover
+            box-shadow: 0px 0px 10px -2.5px rgba(#000, 0.5)
+            transition: all 0.17s
     
     .greeting
       padding: 7rem 0
@@ -31,7 +35,7 @@ section.content
         align-items: center
       .img
         overflow: hidden
-        height: 75vh
+        height: 65vh
         position: relative
         img
           width: 100%
