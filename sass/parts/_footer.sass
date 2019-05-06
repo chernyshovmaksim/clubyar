@@ -1,0 +1,30 @@
+footer.footer
+  background-color: #333
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    .footer-menu
+      margin: 0
+      padding: 0
+      list-style: none
+      display: flex
+      li
+        padding: $padding
+        &:first-child
+          padding-left: 0
+        a
+          color: #ffffff
+          font-size: 14px
+    .copyright
+      color: #ffffff
+      font-size: 12px
+      a
+        color: $red
+        font-weight: 700
+
+@media (max-width: 425px)
+  footer.footer
+    .container
+      justify-content: center

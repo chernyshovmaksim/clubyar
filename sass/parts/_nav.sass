@@ -23,13 +23,16 @@ nav.nav
           color: $dark
           transition: all 0.17s
           border: 2px solid rgba($red, 0)
+            padding-left: 0
           &:hover
             color: $red
             transition: all 0.17s
             border-bottom: 2px solid rgba($red, 1)
           &.active
             border-bottom: 2px solid rgba($red, 1)
-          &::first-child
-            padding-left: 0
-          &::last-child
-            padding-right: 0
+
+@media (max-width: 768px)
+  nav.nav
+    .container
+      ul
+        display: none

@@ -1,7 +1,8 @@
 section.content
   position: relative
-  top: -50vh
-  .container 
+  margin-top: -50vh
+  margin-bottom: $padding
+  .container
     padding: $padding
     background-color: #ffffff
     @include shadow
@@ -48,3 +49,33 @@ section.content
           width: 25%
           height: 100%
           background: linear-gradient(90deg, rgba(#fff, 1), rgba(#fff, 0.1), rgba(#fff, 0))
+    .tools
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: $padding
+      a
+        padding: $padding
+        display: block
+        text-align: center
+        text-decoration: none
+        color: $red
+        @include shadow
+
+
+@media (max-width: 768px)
+  section.content
+    .container
+      .services
+        grid-template-columns: 1fr 1fr
+      .greeting
+        grid-template-columns: 1fr
+        .img
+          display: none
+
+@media (max-width: 425px)
+  section.content
+    .container
+      .services
+        grid-template-columns: 1fr
+      .tools
+        grid-template-columns: 1fr

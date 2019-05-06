@@ -1,0 +1,36 @@
+.preloader-overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #fff
+  z-index: 100
+  display: flex
+  align-items: center
+  justify-content: center
+  .preloader
+    width: 50px
+    height: 50px
+    border-radius: 25%
+    border: 2px solid $red
+    border-top: 1px solid $red
+    animation-name: animation-preloader
+    animation-duration: 1s
+    animation-iteration-count: infinite
+    display: flex
+    justify-content: center
+    align-items: center
+    span
+      color: $red
+      text-transform: uppercase
+
+  &.hidden
+    display: none
+
+
+@keyframes animation-preloader
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
