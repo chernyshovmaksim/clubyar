@@ -36,3 +36,43 @@ nav.nav
     .container
       ul
         display: none
+        &.mobile-menu
+          display: block
+          padding: $padding/2 0
+          li
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            width: 30px
+            height: 30px
+            &:hover
+              cursor: pointer
+            span
+              display: block
+              width: 30px
+              height: 2px
+              background-color: $red
+              border-radius: 2px
+              &::before
+                content: ''
+                display: block
+                width: 30px
+                height: 2px
+                background-color: $red
+                transform: translateY(-10px)
+                border-radius: 2px
+              &::after
+                content: ''
+                display: block
+                width: 30px
+                height: 2px
+                background-color: $red
+                transform: translateY(8px)
+                border-radius: 2px
+
+@media (min-width: 769px)
+  nav.nav
+    .container
+      ul.mobile-menu
+        display: none
