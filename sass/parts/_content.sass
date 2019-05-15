@@ -8,6 +8,41 @@ section.content
     @include shadow
     border-radius: 2px
 
+    h3
+      font-weight: 300
+
+    .post-image-left
+      width: 50%
+      float: left
+      padding-right: $padding
+      img
+        width: 100%
+
+    .gallery
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+      margin: $padding 0
+
+      a
+        display: block
+        width: 16%
+        margin-right: 0.5%
+        margin-bottom: 0.5%
+        padding: 0
+        @include shadow
+        img
+          width: 100%
+          margin: 0
+          padding: 0
+    .table
+      margin: $padding 0
+      th
+        font-weight: 400
+        padding: 0
+      td
+        border: 1px solid #cdcdcd
+
     .services
       display: grid 
       grid-template-columns: repeat(3, 1fr)
@@ -53,6 +88,7 @@ section.content
       display: grid
       grid-template-columns: repeat(2, 1fr)
       grid-gap: $padding
+      margin: $padding 0
       a
         padding: $padding
         display: block
@@ -60,6 +96,28 @@ section.content
         text-decoration: none
         color: $red
         @include shadow
+
+    .accordion
+      width: 100%
+      margin: $padding*2 0
+      .accordion-head
+        padding: $padding
+        background-color: #fff
+        border-radius: 2px
+        color: $red
+        font-weight: 400
+        transition: all 0.17s
+        &:hover
+          cursor: pointer
+          background-color: #f6f6f6
+          transition: all 0.17s
+        @include shadow
+
+      .accordion-body
+        padding: $padding
+        display: none
+        &.show
+          display: block
 
 
 @media (max-width: 768px)
@@ -71,6 +129,13 @@ section.content
         grid-template-columns: 1fr
         .img
           display: none
+      .gallery
+        a
+          width: 18%
+          margin-right: 2%
+          margin-bottom: 2%
+      .post-image-left
+        display: none
 
 @media (max-width: 425px)
   section.content
@@ -79,3 +144,7 @@ section.content
         grid-template-columns: 1fr
       .tools
         grid-template-columns: 1fr
+      .gallery
+        a
+          width: 23%
+          margin-bottom: 2%
