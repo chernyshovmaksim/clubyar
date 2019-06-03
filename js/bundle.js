@@ -6,6 +6,7 @@ window.onload =  () => {
   buttonHidden();
   initGallery();
   accordion();
+  mainPageImages();
 };
 window.onresize = () => {
   heightHeader();
@@ -44,6 +45,14 @@ const mmMenu = () => {
     e.preventDefault();
     e.stopPropagation();
   });
+};
+
+const mainPageImages = () => {
+  const greetTextBlock = document.querySelector('.greeting > span');
+  const greetImgBlock = document.querySelector('.greeting > .img');
+  if(greetImgBlock != null){
+    greetImgBlock.style.minHeight = greetTextBlock.clientHeight + 'px';
+  }
 };
 
 const buttonUp = () => {

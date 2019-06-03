@@ -6,6 +6,7 @@ window.onload =  () => {
   buttonHidden();
   initGallery();
   accordion();
+  mainPageImages();
 };
 window.onresize = () => {
   heightHeader();
@@ -46,6 +47,14 @@ const mmMenu = () => {
   });
 };
 
+const mainPageImages = () => {
+  const greetTextBlock = document.querySelector('.greeting > span');
+  const greetImgBlock = document.querySelector('.greeting > .img');
+  if(greetImgBlock != null){
+    greetImgBlock.style.minHeight = greetTextBlock.clientHeight + 'px';
+  }
+};
+
 const buttonUp = () => {
   new Waypoint({
     element: document.querySelector('section.content'),
@@ -66,13 +75,13 @@ const buttonUp = () => {
 
 const buttonHidden = () => {
   const buttonEl = document.querySelector('.up');
-  buttonEl.style.transition = 'all 0.17s';
+  buttonEl.style.transition = 'all 0.5s';
   buttonEl.style.opacity = 0;
 };
 
 const buttonVisible = () => {
   const buttonEl = document.querySelector('.up');
-  buttonEl.style.transition = 'all 0.17s';
+  buttonEl.style.transition = 'all 0.5s';
   buttonEl.style.opacity = 1;
 };
 
